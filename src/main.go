@@ -31,7 +31,7 @@ func main() {
 	issues, _, err := client.Issues.List(context.Background(), true, &github.IssueListOptions{
 		Filter: "all",
 		State:  "all",
-		Labels: []string{"stale"},
+		Labels: []string{"stale","wontfix"},
 	})
 	if err != nil {
 		panic(err)
